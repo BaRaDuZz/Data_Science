@@ -14,42 +14,37 @@ df = pd.read_csv('Affairs.csv')
 print('\nNumber of rows and columns in the data set: ', df.shape)
 print('')
 
-#print(df.head())
-#print(df.describe())
-
+# print(df.head())
+# print(df.describe())
 
 # Correlation Matrix
 corr = df.corr()
-sns.heatmap(corr, cmap = 'Wistia', annot= True)
+sns.heatmap(corr, cmap='Wistia', annot=True)
 
-#Standard Korrelations-Graf
-sns.lmplot(x='affairs',y='age',data=df,aspect=2,height=6)
+# Standard Korrelations-Graf
+sns.lmplot(x='affairs', y='age', data=df, aspect=2, height=6)
 plt.xlabel('Affairs: as Independent variable')
 plt.ylabel('Age: as Dependent variable')
 plt.title('Affairs Vs Age')
 
-#Violin-Plot Gender und Anzahl der Affären
-f = plt.figure(figsize=(14,6))
+# Violin-Plot Gender und Anzahl der Affären
+f = plt.figure(figsize=(14, 6))
 ax = f.add_subplot(121)
-sns.violinplot(x='gender', y='affairs',data=df,palette='Wistia',ax=ax)
+sns.violinplot(x='gender', y='affairs', data=df, palette='Wistia', ax=ax)
 ax.set_title('Violin plot of affairs vs gender')
 
-#boxplot
-plt.figure(figsize=(14,6))
-sns.boxplot(x='religiousness', y='affairs',hue='gender',data=df,palette='rainbow')
+# boxplot
+plt.figure(figsize=(14, 6))
+sns.boxplot(x='religiousness', y='affairs', hue='gender', data=df, palette='rainbow')
 plt.title('Box plot of religiousness vs affairs');
-
 
 females = df['gender'].value_counts(1)
 males = df['gender'].value_counts(0)
 
-print(females, males)
+
 print(df.head())
 
 
 
 
-
-
 plt.show()
-

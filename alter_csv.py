@@ -5,7 +5,7 @@ import pandas as pd
 # Erste leer Spalte gelöscht
 
 # Deletes first column of the csv
-df = pd.read_csv('Affairs_Original.csv')
+df = pd.read_csv('Big_One.csv')
 # If you know the name of the column skip this
 first_column = df.columns[0]
 # Delete first
