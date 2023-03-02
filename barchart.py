@@ -3,6 +3,11 @@ import numpy as np  # Data manipulation
 import matplotlib.pyplot as plt  # Visualization
 import seaborn as sns  # Visualization
 
+plt.rcParams['figure.figsize'] = [16, 10]
+plt.rcParams['font.size'] = 14
+plt.rcParams['font.weight'] = 'bold'
+plt.style.use('seaborn-whitegrid')
+
 df = pd.read_csv('Affairs.csv')
 
 colors = ['pink', 'red']
@@ -37,11 +42,11 @@ plt.ylim(top=50)
 # Add labels and title
 plt.xlabel('Gender')
 plt.ylabel('Percentage with Affairs')
-plt.title('Percentage of Men and Women with Affairs')
+plt.title('Percentage of married men and women having affairs')
 
 plt.text(0, male_proz, f'{male_proz:.2f}%', ha='center', va='bottom', fontsize=12)
 plt.text(1, female_proz, f'{female_proz:.2f}%', ha='center', va='bottom', fontsize=12)
-plt.savefig('figure.png', transparent=True)
+plt.savefig(r'figures\Percentage of married men and women having affairs.png', transparent=True)
 
 # Show chart
 plt.show()
