@@ -40,7 +40,7 @@ print("R^2:", r2)
 
 
 # Wende das trainierte Modell auf den neuen Datensatz an, um eine Vorhersage zu treffen
-predicted_affairs = knn.predict(Persona3.Persona3)
+predicted_affairs = knn.predict(Persona1.Persona1)
 
 # Drucke die Vorhersage aus
 print('Die Vorhersage der Anzahl der Affären für diese Person beträgt:', predicted_affairs[0])
